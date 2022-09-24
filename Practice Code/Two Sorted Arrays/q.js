@@ -9,33 +9,20 @@ function runProgram(input) {
         line++;
         let array2 = input[line].trim().split(" ").map(Number);
         line++;
-        // let obj = {}
         let i = 0, j = N - 1, count = 0;
-        // insertation in two sorted
-        // || is changed with && 
         while (i < N && j >= 0) {
             if (array1[i] === array2[j]) {
-                // obj[array1[i]] ? obj[array1[i]]++ : obj[array1[i]] = 1;
                 count++;
-                // count
                 i++;
-                // i
                 j--;
-                // j
             }
             else if (array1[i] > array2[j]) {
                 j--;
-                // j
             }
             else if (array1[i] < array2[j]) {
                 i++;
 
-                // i
             }
-            // i
-            // j
-            // count
-            // obj
 
         }
         console.log(count)
